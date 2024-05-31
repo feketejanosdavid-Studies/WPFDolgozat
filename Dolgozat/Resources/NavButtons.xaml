@@ -5,7 +5,7 @@
 
     <Style
         BasedOn="{StaticResource {x:Type ToggleButton}}"
-        x:Key="NavButton"
+        x:Key="NavButtons"
         TargetType="RadioButton">
         <Setter Property="Foreground" Value="white"></Setter>
         <Setter Property="FontSize" Value="17"></Setter>

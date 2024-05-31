@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Dolgozat"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Resources/NavButtons.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Resources/NavButtons.xaml"></ResourceDictionary>
+        
     </Application.Resources>
 </Application>

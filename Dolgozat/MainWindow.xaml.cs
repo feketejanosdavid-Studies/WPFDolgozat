@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dolgozat.ViewModel;
 
 namespace Dolgozat
 {
@@ -23,6 +24,7 @@ namespace Dolgozat
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)

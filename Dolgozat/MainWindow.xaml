@@ -5,31 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dolgozat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="550" Width="900"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None">
+
+ 
+
     <Border Background="#272537" CornerRadius="20">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <StackPanel x:Name="Logo" MouseLeftButtonDown="Logo_MouseLeftButtonDown">
                 <TextBlock Text="School Paper" Foreground="White" FontSize="25px" Margin="40,20"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical" Grid.Row="1">
-                <RadioButton Content="Task 1" Command="{Binding openTask1}" Style="{StaticResource NavButton}" Margin="40,0" ></RadioButton>
-                <RadioButton Content="Task 2" Command="{Binding openTask2}" Style="{StaticResource NavButton}" Margin="40,0"></RadioButton>
-                <RadioButton Content="Task 3" Command="{Binding openTask3}" Style="{StaticResource NavButton}" Margin="40,0"></RadioButton>
-                <RadioButton x:Name="closeButton" Content="Close" Click="closeButton_Click" Style="{StaticResource NavButton}" Margin="40,0"></RadioButton>
+                <RadioButton Content="Task 1" Command="{Binding OpenTask1}" Style="{StaticResource NavButtons}" Margin="40,0" ></RadioButton>
+                <RadioButton Content="Task 2" Command="{Binding OpenTask2}" Style="{StaticResource NavButtons}" Margin="40,0"></RadioButton>
+                <RadioButton Content="Task 3" Command="{Binding OpenTask3}" Style="{StaticResource NavButtons}" Margin="40,0"></RadioButton>
+                <RadioButton x:Name="closeButton" Content="Close" Click="closeButton_Click" Style="{StaticResource NavButtons}" Margin="40,0"></RadioButton>
             </StackPanel>
-            <ContentControl Content="{Binding CurrentView}" Grid.Row="1" Grid.Column="1"></ContentControl>        
+            <ContentControl Margin="10" Grid.Row="1" Grid.Column="1" Content="{Binding CurrentView}"></ContentControl>       
         </Grid>
     </Border>
 </Window>

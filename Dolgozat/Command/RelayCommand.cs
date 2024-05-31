@@ -11,6 +11,7 @@ namespace Dolgozat.Command
     {
         public event EventHandler? CanExecuteChanged;
 
+
         private Action<object> execute;
 
         public RelayCommand(Action<object> execute)
